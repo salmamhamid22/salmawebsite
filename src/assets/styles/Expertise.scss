@@ -1,0 +1,119 @@
+.skills-container {
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.skills-container svg {
+    color: white;
+}
+
+.skills-container .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+
+.skills-container .skills-grid .skill {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.skills-container .skills-grid .skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15);
+}
+
+.skill h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #993bbe; /* teal accent */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.chip {
+    color: rgb(39, 40, 34) !important;
+    background-color: white !important;
+    font-size: 0.85rem !important;
+    height: 28px !important;
+    border-radius: 25px !important;
+    padding: 0 10px !important;
+    font-family: 'Courier Prime', monospace;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.chip:hover {
+    background-color: #9d4fd1 !important;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+.flex-chips {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 2;
+    margin-top: 0.5rem;
+    gap: 10px;
+}
+
+.flex-chips .chip-title {
+    color: white;
+    padding-right: 10px;
+    font-weight: 500;
+}
+
+.flex-chips .MuiChip-root {
+    margin-right: 0.5em;
+}
+
+.flex-chips .MuiChip-outlined {
+    background-color: #e0e0e0;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+.flex-chips .MuiChip-outlined span {
+    color: rgb(39, 40, 34);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .skills-container {
+        display: block;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .skills-container .skills-grid {
+        display: block;
+    }
+
+    .skills-container .skills-grid .skill {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 567px) {
+    .skills {
+        font-size: 12px;
+    }
+}
